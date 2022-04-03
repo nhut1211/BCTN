@@ -1,0 +1,42 @@
+@extends('LayoutUser')
+@section('content')      
+<div class="card">
+    @foreach($edit_dichvu as $key => $value)
+    <form class="form-horizontal" action="{{URL::to('/update-dich-vu/'.$value->id_dichvu)}}" method="post">
+        {{ csrf_field() }}             
+        <div class="card-body">
+            <h2 class="card-title text-center row1">SỬA DỊCH VỤ</h2>
+            <div class="form-group row row2">
+                <label for="lname" class="col-sm-2 text-right control-label col-form-label">Trạng thái</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" value="{{$value->trang_thai}}" id="lname" name="trang_thai">
+                </div>
+            </div>
+            <div class="form-group row row2">
+                <label for="lname" class="col-sm-2 text-right control-label col-form-label">Tên dịch vụ:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" value="{{$value->ten_dichvu}}" id="lname" name="ten_dichvu" >
+                </div>
+            </div>
+            <div class="form-group row row2">
+                <label for="lname" class="col-sm-2 text-right control-label col-form-label">Giá:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" value="{{$value->gia}}" id="lname" name="gia" >
+                </div>
+            </div>
+            <div class="form-group row row2">
+                <label for="lname" class="col-sm-2 text-right control-label col-form-label">Mô tả:</label>
+                <div class="col-sm-9">
+                    <textarea type="text" class="form-control"  id="lname" name="mo_ta" >{{$value->mo_ta}}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="border-top text-center row2">
+            <div class="card-body">
+                <button type="submit" name="them" class="btn btn-primary">Sửa</button>
+            </div>
+        </div>
+    </form>
+    @endforeach
+</div>
+@endsection

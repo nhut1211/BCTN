@@ -1,0 +1,306 @@
+@import "compass/css3";
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body {
+	font-family: "Lato", Helvetica, Arial;
+	font-size: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+*, *:before, *:after {
+	-webkit-border-sizing: border-box;
+	-moz-border-sizing: border-box;
+	border-sizing: border-box;
+}
+
+.container, ul {
+	width: 350px;
+	margin: 50px auto;
+  
+
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  
+}
+
+
+
+@mixin ul-nostyle {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin double-shadow($color) {
+	@include box-shadow(0 1px 0 lighten($color, 10%) inset, 0 -1px 0 darken($color, 10%) inset);
+}
+
+@mixin hover-style($color) {
+	&:hover {
+		background: lighten($color, 3%);
+	}
+}
+
+@mixin animation($content) {
+  animation: $content;
+  -moz-animation: $content;
+  -webkit-animation: $content;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+}
+
+
+.title {
+  font-family: 'Pacifico';
+  font-weight: norma;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+
+.info_form {
+    border: 1px solid #555;
+    margin: 0px 50px;
+    padding: 0px 25px;
+    padding-bottom: 20px;
+    float: left;
+    width: 92%;
+}
+
+.info_form .info_name, .info_form .info {
+    width: 20%;
+    margin-right: 40px;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    float: left;
+}
+
+.info_form input[type=text] {
+    width: 90%;
+    padding: 7px 10px;
+    font-size:16px;
+}
+
+.info_form input[type=date] {
+    width: 90%;
+    padding: 6px 10px;
+}
+
+.row2{
+    padding-top: 20px;
+    clear: both;
+}
+
+.row3{
+    clear: both;
+}
+
+.btn-add {    
+    padding: 8px 15px;
+    background: #04b404;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.btn-add i.fa.fa-plus-circle, .btn-submit i.fa.fa-plus-circle {
+    margin-right: 10px;
+}
+
+.search {
+    width: 20%;
+    border: 1px solid #ff8000;
+    border-radius: 10px;
+    float: left;
+}
+.info_form h3{
+    margin-top: 10px;
+    color: #ff8000;
+}
+.anh1{
+    width: 50px;
+    height: 50px;
+}
+.anh2{
+    margin-top: 15px;
+}
+select{
+    width: 90%;
+    padding: 7px 10px;
+    font-size: 16px;
+}
+.timkiem{
+    margin-top: 10px;
+    margin-left: 15px;
+    
+}
+.d-flex{
+    background: #fff;
+}
+
+.container {
+
+    width:200px;
+
+    position: relative;
+
+}
+
+
+
+
+
+.click{
+
+    
+    color:#54667a;
+
+}
+
+.click:hover {
+ color:#54667a;
+   
+
+}
+
+.click,.links{
+ color:#54667a;
+
+    padding: 12px;
+
+    font-size: 1.2em;
+
+    font-family: futura Md BT;
+
+    border: none;
+
+    outline: none;
+
+    width:200px;
+
+    color:#54667a;
+
+    transition: 0.3s;
+
+}
+
+.list {
+ color:#54667a;
+
+    position: absolute;
+
+    transform: scaleY(0);
+
+    transform-origin: top;
+
+    transition: 0.3s;
+
+}
+
+.newlist{
+
+    transform: scaleY(1);
+
+}
+
+.links {
+   
+    right: 20px;
+
+}
+
+.links:hover {
+
+    background-color: #01579B;
+
+    transform: scale(1.1);
+
+}
+.text{
+	float:right;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  .dropdown-content {
+    left: 0;
+  }
+
+  .dropdown-list{
+      border-radius: 4px;
+      background-color: white;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s linear, visibility 0.1s linear;
+  }
+  .dropdown-list__item{
+      padding: 1rem;
+      font-size: 1.4rem;
+  }
+  .sidebar-item:hover .dropdown-list{
+      opacity: 1;
+      visibility: visible;
+  } 
+
+
+  
